@@ -1,0 +1,29 @@
+// creating the json output for the file here , how ?  
+
+
+<?php 
+	
+	
+	$mysql=new mysqli('localhost','tuck','1234561','tuck'); 
+
+
+	$sqly='select name,category,price,image,path from products2 where status=1'; 
+
+
+	$result=$mysql->query($sqly);
+
+		$cart=array();
+
+		// after getting the array here , we have here , and then or alos we have here 
+
+		while($row=$result->fetch_array()){
+
+				// output all the values here and convert into the json format here , how  ? 
+
+				array_push($cart,$row[0],$row[1],$rpw[2]);
+
+		}
+
+		echo json_encode($a); 
+
+?>
